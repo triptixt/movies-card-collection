@@ -1,0 +1,188 @@
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Card Collection</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="main">
+    <div class="box">
+        <div class="box-img">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/yeh-jawaani-hai-deewani-1-one_one.jpg?VersionId=qXFAHUoy2DVwzckBT0bTNYj8s8h6QxZn">
+        </div>
+        <div class="content">
+            <h3>YEH JAWANI HAI DIWANI</h3>
+            <p>IMDb 7.2/10</p>
+        </div>
+        <div class="button">
+            <li><a class="b1" href="#">Watch Now</a></li>
+            <li><a class="b1" href="#">Download</a></li>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img
+                src="https://assets-in.bmscdn.com/discovery-catalog/events/et00003305-vvqtkqlfsu-landscape.jpg">
+        </div>
+        <div class="content">
+            <h3>WAKE UP SID</h3>
+            <p>IMDb 7.6/10</p>
+        </div>
+        <div class="button">
+            <li><a class="b1" href="#">Watch Now</a></li>
+            <li><a class="b1" href="#">Download</a></li>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Welcome_poster_2007.jpg/220px-Welcome_poster_2007.jpg">
+        </div>
+        <div class="content">
+            <h3>WELCOME</h3>
+            <p>IMDb 7.1/10</p>
+        </div>
+        <div class="button">
+            <li><a class="b1" href="#">Watch Now</a></li>
+            <li><a class="b1" href="#">Download</a></li>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs3xZfL-eqE6xxnIWJ7KYFs6XZkQR6dsGiQ&s">
+        </div>
+        <div class="content">
+            <h3>JAB WE MET</h3>
+            <p>IMDb 7.9/10</p>
+        </div>
+        <div class="button">
+            <li><a class="b1" href="#">Watch Now</a></li>
+            <li><a class="b1" href="#">Download</a></li>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+#style.css
+body {
+    margin: 100px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(32, 20, 22);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    width: 252px;
+    perspective: 1000px;
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(145deg, #333, #222);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.box .box-img img {
+    width: 250px;
+    height: 380px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+.box:hover .box-img img {
+    transform: rotateY(-90deg);
+}
+
+.box .content {
+    color: white;
+    background: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 90px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition: transform 0.6s ease;
+}
+
+.box:hover .content {
+    transform: rotateY(0);
+}
+
+.box .content h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.box .content p {
+    font-size: 1em;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 15px 0;
+    margin: 0 25px;
+}
+
+.box .button {
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 260px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    transform: rotateY(90deg);
+    transition: transform 0.6s ease;
+}
+
+.box:hover .button {
+    transform: rotateY(0);
+}
+
+.box .button li {
+    list-style: none;
+    padding: 15px 0;
+}
+
+.box .button li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    background: linear-gradient(145deg, #27ae60, #1e8449);
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.box .button li a:hover {
+    background: linear-gradient(145deg, #2ecc71, #27ae60);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
